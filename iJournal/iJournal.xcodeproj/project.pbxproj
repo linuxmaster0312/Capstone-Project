@@ -14,6 +14,9 @@
 		E7C052402B7D2CA7009CEF4E /* iJournalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C0523F2B7D2CA7009CEF4E /* iJournalTests.swift */; };
 		E7C0524A2B7D2CA7009CEF4E /* iJournalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C052492B7D2CA7009CEF4E /* iJournalUITests.swift */; };
 		E7C0524C2B7D2CA7009CEF4E /* iJournalUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C0524B2B7D2CA7009CEF4E /* iJournalUITestsLaunchTests.swift */; };
+		E7C0525A2B7D3365009CEF4E /* TextEditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C052592B7D3365009CEF4E /* TextEditorView.swift */; };
+		E7C0525C2B7D337D009CEF4E /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C0525B2B7D337D009CEF4E /* SettingsView.swift */; };
+		E7C0525E2B7D338B009CEF4E /* FileManagerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C0525D2B7D338B009CEF4E /* FileManagerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +48,9 @@
 		E7C052452B7D2CA7009CEF4E /* iJournalUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iJournalUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7C052492B7D2CA7009CEF4E /* iJournalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iJournalUITests.swift; sourceTree = "<group>"; };
 		E7C0524B2B7D2CA7009CEF4E /* iJournalUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iJournalUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		E7C052592B7D3365009CEF4E /* TextEditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextEditorView.swift; sourceTree = "<group>"; };
+		E7C0525B2B7D337D009CEF4E /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		E7C0525D2B7D338B009CEF4E /* FileManagerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManagerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,8 +101,8 @@
 		E7C0522C2B7D2CA6009CEF4E /* iJournal */ = {
 			isa = PBXGroup;
 			children = (
+				E7C052582B7D333E009CEF4E /* Views */,
 				E7C0522D2B7D2CA6009CEF4E /* iJournalApp.swift */,
-				E7C0522F2B7D2CA6009CEF4E /* ContentView.swift */,
 				E7C052312B7D2CA7009CEF4E /* Assets.xcassets */,
 				E7C052362B7D2CA7009CEF4E /* iJournal.entitlements */,
 				E7C052332B7D2CA7009CEF4E /* Preview Content */,
@@ -127,6 +133,17 @@
 				E7C0524B2B7D2CA7009CEF4E /* iJournalUITestsLaunchTests.swift */,
 			);
 			path = iJournalUITests;
+			sourceTree = "<group>";
+		};
+		E7C052582B7D333E009CEF4E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E7C0522F2B7D2CA6009CEF4E /* ContentView.swift */,
+				E7C052592B7D3365009CEF4E /* TextEditorView.swift */,
+				E7C0525B2B7D337D009CEF4E /* SettingsView.swift */,
+				E7C0525D2B7D338B009CEF4E /* FileManagerView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,6 +276,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7C0525A2B7D3365009CEF4E /* TextEditorView.swift in Sources */,
+				E7C0525C2B7D337D009CEF4E /* SettingsView.swift in Sources */,
+				E7C0525E2B7D338B009CEF4E /* FileManagerView.swift in Sources */,
 				E7C052302B7D2CA6009CEF4E /* ContentView.swift in Sources */,
 				E7C0522E2B7D2CA6009CEF4E /* iJournalApp.swift in Sources */,
 			);
@@ -421,6 +441,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = iJournal/iJournal.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -446,6 +467,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = iJournal/iJournal.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
