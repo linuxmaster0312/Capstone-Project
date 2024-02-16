@@ -7,12 +7,12 @@
 
 import SwiftUI
 
-struct FileManagerView: View {
+struct NoteManagerView: View {
     var body: some View {
         Text("file manager view")
     }
 }
 
 #Preview {
-    FileManagerView()
+    NoteManagerView()
 }

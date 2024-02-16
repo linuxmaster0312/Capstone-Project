@@ -15,7 +15,7 @@ struct ContentView: View {
         var id: String { rawValue }
         case textEditor
         case settings
-        case fileManager
+        case noteManager
     }
     
     var body: some View {
@@ -28,11 +28,11 @@ struct ContentView: View {
         }  detail: {
             switch selectedSideBarItem {
             case .textEditor:
-                Text("Text Editor View")
+                TextEditorView()
             case .settings:
-                Text("Settings View")
-            case .fileManager:
-                Text("File Manager View")
+                SettingsView()
+            case .noteManager:
+                NoteManagerView()
             }
         }
     }
