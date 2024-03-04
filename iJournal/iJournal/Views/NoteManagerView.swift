@@ -8,8 +8,26 @@
 import SwiftUI
 
 struct NoteManagerView: View {
+    @EnvironmentObject private var noteViewModel: NoteViewModel
+
     var body: some View {
-        Text("file manager view")
+        ScrollView {
+            VStack {
+                ForEach(noteViewModel.notes, id: \.self) { note in
+                    Button(note.title) {
+                        noteViewModel.currentNote = note
+                        noteViewModel.selectNote(note)
+
+                        // Logic to switch to TextEditorView goes here
+                    }
+                    .padding()
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .background(Color.gray.opacity(0.2))
+                    .cornerRadius(5)
+                }
+            }
+            .padding()
+        }
     }
 }
 

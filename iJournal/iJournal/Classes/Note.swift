@@ -7,8 +7,8 @@
 
 import Foundation
 
-class Note{
-    //Notes are essentially text files, notes store details on how text should be rendered as well as the content of notes
+class Note: Equatable, Hashable {
+    // Notes are essentially text files, notes store details on how text should be rendered as well as the content of notes
     var title: String
     var content: String
     var creationDate: Date
@@ -17,5 +17,19 @@ class Note{
         self.title = title
         self.content = content
         self.creationDate = creationDate
+    }
+    
+    // Equatable
+    static func == (lhs: Note, rhs: Note) -> Bool {
+        // Here, we're considering them equal if all their properties match.
+        return lhs.title == rhs.title && lhs.content == rhs.content && lhs.creationDate == rhs.creationDate
+    }
+    
+    // Hashable
+    func hash(into hasher: inout Hasher) {
+        // Hash the properties that are considered in the Equatable implementation
+        hasher.combine(title)
+        hasher.combine(content)
+        hasher.combine(creationDate)
     }
 }

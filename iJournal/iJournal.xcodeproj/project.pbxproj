@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E769D5822B7FD866005CA393 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = E769D5812B7FD866005CA393 /* Note.swift */; };
-		E769D5842B7FDAB2005CA393 /* NoteManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E769D5832B7FDAB2005CA393 /* NoteManager.swift */; };
+		E769D5842B7FDAB2005CA393 /* NoteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E769D5832B7FDAB2005CA393 /* NoteViewModel.swift */; };
 		E7C0522E2B7D2CA6009CEF4E /* iJournalApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C0522D2B7D2CA6009CEF4E /* iJournalApp.swift */; };
 		E7C052302B7D2CA6009CEF4E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C0522F2B7D2CA6009CEF4E /* ContentView.swift */; };
 		E7C052322B7D2CA7009CEF4E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7C052312B7D2CA7009CEF4E /* Assets.xcassets */; };
@@ -40,7 +40,7 @@
 
 /* Begin PBXFileReference section */
 		E769D5812B7FD866005CA393 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
-		E769D5832B7FDAB2005CA393 /* NoteManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteManager.swift; sourceTree = "<group>"; };
+		E769D5832B7FDAB2005CA393 /* NoteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewModel.swift; sourceTree = "<group>"; };
 		E7C0522A2B7D2CA6009CEF4E /* iJournal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iJournal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7C0522D2B7D2CA6009CEF4E /* iJournalApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iJournalApp.swift; sourceTree = "<group>"; };
 		E7C0522F2B7D2CA6009CEF4E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -86,7 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				E769D5812B7FD866005CA393 /* Note.swift */,
-				E769D5832B7FDAB2005CA393 /* NoteManager.swift */,
+				E769D5832B7FDAB2005CA393 /* NoteViewModel.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -292,7 +292,7 @@
 			files = (
 				E7C0525A2B7D3365009CEF4E /* TextEditorView.swift in Sources */,
 				E769D5822B7FD866005CA393 /* Note.swift in Sources */,
-				E769D5842B7FDAB2005CA393 /* NoteManager.swift in Sources */,
+				E769D5842B7FDAB2005CA393 /* NoteViewModel.swift in Sources */,
 				E7C0525C2B7D337D009CEF4E /* SettingsView.swift in Sources */,
 				E7C0525E2B7D338B009CEF4E /* NoteManagerView.swift in Sources */,
 				E7C052302B7D2CA6009CEF4E /* ContentView.swift in Sources */,
