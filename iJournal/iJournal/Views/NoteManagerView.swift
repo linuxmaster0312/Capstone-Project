@@ -11,25 +11,31 @@ struct NoteManagerView: View {
     @EnvironmentObject private var noteViewModel: NoteViewModel
 
     var body: some View {
-        ScrollView {
-            VStack {
-                ForEach(noteViewModel.notes, id: \.self) { note in
-                    Button(note.title) {
-                        noteViewModel.currentNote = note
-                        noteViewModel.selectNote(note)
-
-                        // Logic to switch to TextEditorView goes here
-                    }
-                    .padding()
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .background(Color.gray.opacity(0.2))
-                    .cornerRadius(5)
+        VStack {
+            Picker("Select Group", selection: $noteViewModel.currentGroup) {
+                ForEach(noteViewModel.groups, id: \.self) { group in
+                    Text(group).tag(group)
                 }
+            }.padding()
+
+            ScrollView {
+                VStack {
+                    ForEach(noteViewModel.notesInCurrentGroup(), id: \.self) { note in
+                        Button(note.title) {
+                            noteViewModel.selectNote(note)
+                        }
+                        .padding()
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .background(Color.gray.opacity(0.2))
+                        .cornerRadius(5)
+                    }
+                }
+                .padding()
             }
-            .padding()
         }
     }
 }
+
 
 #Preview {
     NoteManagerView()

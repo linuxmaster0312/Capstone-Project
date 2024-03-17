@@ -12,17 +12,26 @@ class Note: Equatable, Hashable {
     var title: String
     var content: String
     var creationDate: Date
+    var organization_group: String
 
     init(title: String, content: String, creationDate: Date = Date()) {
         self.title = title
         self.content = content
         self.creationDate = creationDate
+        self.organization_group = "default"
+    }
+    
+    init(title: String, content: String, organization_group: String, creationDate: Date = Date()) {
+        self.title = title
+        self.content = content
+        self.creationDate = creationDate
+        self.organization_group = organization_group
     }
     
     // Equatable
     static func == (lhs: Note, rhs: Note) -> Bool {
         // Here, we're considering them equal if all their properties match.
-        return lhs.title == rhs.title && lhs.content == rhs.content && lhs.creationDate == rhs.creationDate
+        return lhs.title == rhs.title && lhs.content == rhs.content && lhs.creationDate == rhs.creationDate && lhs.organization_group == rhs.organization_group
     }
     
     // Hashable
@@ -31,5 +40,6 @@ class Note: Equatable, Hashable {
         hasher.combine(title)
         hasher.combine(content)
         hasher.combine(creationDate)
+        hasher.combine(organization_group)
     }
 }
