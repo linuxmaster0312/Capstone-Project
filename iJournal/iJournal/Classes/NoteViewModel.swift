@@ -21,7 +21,7 @@ class NoteViewModel: ObservableObject {
         self.currentContent = ""
         TextEditorViewModel.shared.title = ""
         TextEditorViewModel.shared.content = ""
-        TextEditorViewModel.shared.group = ""
+        TextEditorViewModel.shared.group = "default"
         ContentViewModel.shared.setView("textEditor")
     }
 
