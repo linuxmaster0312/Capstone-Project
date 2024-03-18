@@ -9,40 +9,30 @@ import SwiftUI
 
 struct ContentView: View {
     @EnvironmentObject private var noteViewModel: NoteViewModel
-    
+    @ObservedObject private var contentViewModel =  ContentViewModel.shared
     @State var sideBarVisibility: NavigationSplitViewVisibility = .doubleColumn
-    @State var selectedSideBarItem: SideBarItem = .textEditor
     @State private var showingNewGroupAlert = false
     @State private var newGroupName = ""
 
-    enum SideBarItem: String, Identifiable, CaseIterable {
-        var id: String { rawValue }
-        case textEditor
-        case settings
-        case noteManager
-    }
-    
     var body: some View {
         ZStack{
             NavigationSplitView(columnVisibility: $sideBarVisibility) {
-                List(SideBarItem.allCases, id: \.self, selection: $selectedSideBarItem) { item in
+                List(ContentViewModel.SideBarItem.allCases, id: \.self, selection: $contentViewModel.currentlyDisplayedView) { item in
                     Text(item.rawValue.localizedCapitalized)
                         .tag(item)
                 }
                 .listStyle(SidebarListStyle())
             }  detail: {
-                switch selectedSideBarItem {
+                switch contentViewModel.currentlyDisplayedView {
                 case .textEditor:
                     TextEditorView()
                         .environmentObject(noteViewModel)
-                        .id(noteViewModel.refreshID)
                 case .settings:
                     SettingsView()
                         .environmentObject(noteViewModel)
                 case .noteManager:
                     NoteManagerView()
                         .environmentObject(noteViewModel)
-                        .id(noteViewModel.refreshID)
                 }
             }
             VStack{
@@ -61,8 +51,6 @@ struct ContentView: View {
                     }
                     Button(action: {
                         noteViewModel.prepareNewNote()
-                        selectedSideBarItem = .textEditor
-                        print("Contents of notes array: \(noteViewModel.notes)")
                     }) {
                         Text("New Note")
                     }
@@ -75,9 +63,6 @@ struct ContentView: View {
                 noteViewModel.addGroup(newGroupName)
                 newGroupName = ""
             }
-        }
-        .onChange(of: noteViewModel.currentNote) { _ in
-            selectedSideBarItem = .textEditor
         }
     }
 }

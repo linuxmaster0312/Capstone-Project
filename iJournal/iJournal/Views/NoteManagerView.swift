@@ -22,7 +22,10 @@ struct NoteManagerView: View {
                 VStack {
                     ForEach(noteViewModel.notesInCurrentGroup(), id: \.self) { note in
                         Button(note.title) {
-                            noteViewModel.selectNote(note)
+                            print("clicked button")
+                            DispatchQueue.main.async{
+                                noteViewModel.selectNote(note)
+                            }
                         }
                         .padding()
                         .frame(maxWidth: .infinity, alignment: .leading)

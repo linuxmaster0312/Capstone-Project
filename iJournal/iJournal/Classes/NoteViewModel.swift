@@ -8,7 +8,6 @@
 import Foundation
 
 class NoteViewModel: ObservableObject {
-    @Published var refreshID = UUID()
     @Published var notes: [Note] = []
     @Published var currentNote: Note?
     @Published var currentGroup: String = "default" // Current selected group
@@ -17,8 +16,13 @@ class NoteViewModel: ObservableObject {
     @Published var currentContent: String = ""
 
     func prepareNewNote() {
-        currentNote = Note(title: "", content: "", organization_group: currentGroup)
-        refreshID = UUID() // Update the refreshID to trigger view refresh
+        self.currentNote = Note(title: "", content: "", organization_group: self.currentGroup)
+        self.currentTitle = ""
+        self.currentContent = ""
+        TextEditorViewModel.shared.title = ""
+        TextEditorViewModel.shared.content = ""
+        TextEditorViewModel.shared.group = ""
+        ContentViewModel.shared.setView("textEditor")
     }
 
     func saveNote(title: String, content: String, group: String) {
@@ -36,19 +40,20 @@ class NoteViewModel: ObservableObject {
                 groups.append(group) // Add new group if it doesn't exist
             }
         }
-        refreshID = UUID() // Refresh the ID to trigger a UI update
     }
 
     func selectNote(_ note: Note) {
-        currentNote = note
-        currentTitle = note.title
-        currentContent = note.content
-        refreshID = UUID()
+        DispatchQueue.main.async {
+            print("selected note")
+            self.currentNote = note
+            self.currentTitle = note.title
+            self.currentContent = note.content
+            ContentViewModel.shared.setView("textEditor")
+        }
     }
 
     func selectGroup(_ group: String) {
         currentGroup = group
-        refreshID = UUID() // Trigger a UI update to show notes in the selected group
     }
     
     func notesInCurrentGroup() -> [Note] {

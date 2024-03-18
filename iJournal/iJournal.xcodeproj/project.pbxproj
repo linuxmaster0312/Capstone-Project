@@ -7,9 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E75567662BA89BEE00EB0A54 /* KeyShortcutModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75567652BA89BEE00EB0A54 /* KeyShortcutModel.swift */; };
 		E769D5822B7FD866005CA393 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = E769D5812B7FD866005CA393 /* Note.swift */; };
 		E769D5842B7FDAB2005CA393 /* NoteViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E769D5832B7FDAB2005CA393 /* NoteViewModel.swift */; };
 		E7B03FE42BA7B2ED00496984 /* GroupAddSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7B03FE32BA7B2ED00496984 /* GroupAddSheetView.swift */; };
+		E7BED9BB2BA8A1D600E9CB7C /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BED9BA2BA8A1D600E9CB7C /* ContentViewModel.swift */; };
+		E7BED9BD2BA8A59600E9CB7C /* TextEditorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BED9BC2BA8A59600E9CB7C /* TextEditorViewModel.swift */; };
 		E7C0522E2B7D2CA6009CEF4E /* iJournalApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C0522D2B7D2CA6009CEF4E /* iJournalApp.swift */; };
 		E7C052302B7D2CA6009CEF4E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7C0522F2B7D2CA6009CEF4E /* ContentView.swift */; };
 		E7C052322B7D2CA7009CEF4E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7C052312B7D2CA7009CEF4E /* Assets.xcassets */; };
@@ -40,9 +43,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E75567652BA89BEE00EB0A54 /* KeyShortcutModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyShortcutModel.swift; sourceTree = "<group>"; };
 		E769D5812B7FD866005CA393 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		E769D5832B7FDAB2005CA393 /* NoteViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewModel.swift; sourceTree = "<group>"; };
 		E7B03FE32BA7B2ED00496984 /* GroupAddSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupAddSheetView.swift; sourceTree = "<group>"; };
+		E7BED9BA2BA8A1D600E9CB7C /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
+		E7BED9BC2BA8A59600E9CB7C /* TextEditorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextEditorViewModel.swift; sourceTree = "<group>"; };
 		E7C0522A2B7D2CA6009CEF4E /* iJournal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iJournal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7C0522D2B7D2CA6009CEF4E /* iJournalApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iJournalApp.swift; sourceTree = "<group>"; };
 		E7C0522F2B7D2CA6009CEF4E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -89,6 +95,9 @@
 			children = (
 				E769D5812B7FD866005CA393 /* Note.swift */,
 				E769D5832B7FDAB2005CA393 /* NoteViewModel.swift */,
+				E75567652BA89BEE00EB0A54 /* KeyShortcutModel.swift */,
+				E7BED9BA2BA8A1D600E9CB7C /* ContentViewModel.swift */,
+				E7BED9BC2BA8A59600E9CB7C /* TextEditorViewModel.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -294,8 +303,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				E7C0525A2B7D3365009CEF4E /* TextEditorView.swift in Sources */,
+				E7BED9BD2BA8A59600E9CB7C /* TextEditorViewModel.swift in Sources */,
 				E769D5822B7FD866005CA393 /* Note.swift in Sources */,
 				E769D5842B7FDAB2005CA393 /* NoteViewModel.swift in Sources */,
+				E75567662BA89BEE00EB0A54 /* KeyShortcutModel.swift in Sources */,
+				E7BED9BB2BA8A1D600E9CB7C /* ContentViewModel.swift in Sources */,
 				E7C0525C2B7D337D009CEF4E /* SettingsView.swift in Sources */,
 				E7B03FE42BA7B2ED00496984 /* GroupAddSheetView.swift in Sources */,
 				E7C0525E2B7D338B009CEF4E /* NoteManagerView.swift in Sources */,
